@@ -1,0 +1,11 @@
+1、make: *** No rule to make target `test1.h', needed by `test'.  Stop.
+「test : test1.c test1.h
+    gcc -o test test1.c -Iinclude
+    」
+2、test1.c:3:10: fatal error: 'test1.h' file not found
+    test1:test1.o
+    	gcc -o test1 test1.o
+
+    test.o: test1.c test1.h
+    	gcc -c test1.c -Iinclude
+3、
